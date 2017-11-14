@@ -1,5 +1,7 @@
 import { action, computed, extendObservable } from 'mobx'
 import React from 'react'
+// components
+import Hero from '../components/hero'
 
 class NavObservables {
   constructor(){
@@ -20,8 +22,10 @@ class NavObservables {
             return 'Defense'
           }
           case 'Hero': {
-            return 'Hero'
+            return <Hero/>
           }
+          default: return <Hero/>
+          
         }
       })
     })
