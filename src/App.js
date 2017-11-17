@@ -43,7 +43,7 @@ const burst = ()=> {
 } 
 const container = {
   background: `url(${chalk})`,
-  height: window.innerHeight
+  // height: window.innerHeight
 }
 const header = {
   textAlign: 'center',
