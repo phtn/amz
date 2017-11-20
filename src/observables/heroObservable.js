@@ -9,20 +9,14 @@ class HeroObservables {
       left: 'Sentinel',
       leftToggle: action(a=> {
         console.log('test')
-        switch(this.left){
-          case 'Sentinel': this.left = 'Arbiter'
-        }
+        
       }),
       leftComponent: computed(a=>{
         switch(this.left){
-          case 'Sentinel': {
-            return <Sentinel/>
-          }
-          break
+          case 'Sentinel': return <Sentinel/>
           case 'Arbiter': {
             return <Arbiter/>
           }
-          break
           case 'Winged Assasin': this.left = 'Aranea'
           break
           case 'Aranea': this.left = 'Grim Reaper'
@@ -31,7 +25,7 @@ class HeroObservables {
           break
           case 'Undertaker': this.left = 'Sentinel'
           break
-          default: this.left = 'Sentinel'
+          default: return this.left = 'Sentinel'
         }
       })
     })

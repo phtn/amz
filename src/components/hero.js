@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Menu, Segment, Image, Divider } from 'semantic-ui-react'
+import { Grid, Segment, Divider } from 'semantic-ui-react'
 import HeroObservables from '../observables/heroObservable'
 
 const container = { margin: 5, textAlign: 'center'}

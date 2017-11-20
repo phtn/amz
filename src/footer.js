@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider, Icon } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 import chalk from './chalkboard.jpg'
 const container = {
   width: window.innerWidth,
@@ -7,17 +7,17 @@ const container = {
   position: 'fixed',
   bottom: 0,
   // backgroundColor: '#efefef',
-  height: 80,
+  height: 20,
   textAlign: 'center',
   color: '#61DAFB',
   fontFamily: 'Roboto, sans-serif',
   fontWeight: 100,
   fontSize: 11,
-  background: `url(${chalk})`
+  background: `url(${chalk})`,
+  // borderTop: '1px solid #666'
 }
 export default props => (
   <div style={container}>
-  <Divider/>
-  Made with <Icon name='empty heart'/>by <strong>(AMZ)</strong> ThereforeIAm
+  Made with <Icon color='red' name='empty heart'/>by <strong>(AMZ)</strong> ThereforeIAm
   </div>
 )
