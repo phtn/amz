@@ -1,6 +1,6 @@
 import React from 'react'
 import { Segment } from 'semantic-ui-react'
-import XV from '../assets/xvlogo.png'
+import Noctis from '../assets/noctis.png'
 const container = {
   padding: 5,
   color: '#999',
@@ -12,12 +12,12 @@ const segment = {
 const spectral = {fontFamily: 'Spectral SC, serif', color: '#F0B400'}
 export default props => (
   <div style={container}>
-    <img src={XV} alt='logo' height={200}/>
+    <img src={Noctis} alt='logo' height={200}/>
     <br/>
     <Segment style={segment}>
-    Welcome all players of the badass game!
+    
     <br/>
-    <p style={spectral}>Final Fantasy XV: New Empire</p>
+    <p style={spectral}>{props.name} Page in development...</p>
     </Segment>
   </div>
 )
