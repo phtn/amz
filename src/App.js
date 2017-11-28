@@ -43,7 +43,6 @@ import Footer from './footer'
 // } 
 const container = {
   background: `url(${chalk})`,
-  backgroundRepeat: 'repeat',
   height: window.innerHeight
 }
 const header = {

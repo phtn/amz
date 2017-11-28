@@ -4,22 +4,18 @@ import { Segment, Image, List, Divider, Grid } from 'semantic-ui-react'
 import Royal from '../assets/royal.svg'
 import Head from '../assets/head.svg'
 
-const container = {
-  padding: 5,
-  color: '#999',
-  textAlign: 'center'
-}
-const segment = {
-  backgroundColor: 'transparent'
-}
-const name={
-  color: '#61DAFB'
-}
-const desc={
-  color: '#666',
-  fontFamily: 'Spectral SC, serif'
-}
+const container = {padding: 5, color: '#999', textAlign: 'center'}
+const segment = {backgroundColor: 'transparent'}
+const name={color: '#61DAFB'}
+const desc = {color: '#666', fontFamily: 'Spectral SC, serif'}
 const spectral = {fontFamily: 'Spectral SC, serif', color: '#F0B400'}
+
+const council = {
+  lyandra: {name: 'Lyandra', desc: 'R4 - VP'},
+  therefore: {name: 'ThereforeIAm', desc: 'R4 - War Chief'},
+  juicy: {name: 'Whos Juicy', desc: 'R4 - Event Master'},
+}
+
 export default props => (
   <div style={container}>
     <List>
@@ -32,7 +28,7 @@ export default props => (
         </List.Content>
       </List.Item>
       <Divider/>
-      <Grid divided='vertically'>
+      <Grid divided='vertically' textAlign='center'>
       <Grid.Column width={5}>
       <List.Item>
         <Image avatar src={Head}/>
