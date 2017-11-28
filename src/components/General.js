@@ -15,7 +15,7 @@ export default props => (
     <img src={XV} alt='logo' height={200}/>
     <br/>
     <Segment style={segment}>
-    Welcome all players of the badass game!
+    Welcome all members of the guild (AMZ)
     <br/>
     <p style={spectral}>Final Fantasy XV: New Empire</p>
     </Segment>

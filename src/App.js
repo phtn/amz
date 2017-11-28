@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
-import crown from './crown2.svg'
+import Swords from './assets/swordswoman.svg'
 import './App.css'
 import mojs from 'mo-js'
 import 'semantic-ui-css/semantic.min.css'
@@ -11,11 +11,11 @@ const burst = ()=> {
   new mojs.Shape({
     shape:'circle',
     points:6,
-    scale:1.2,
-    top:'70px',
+    scale:1,
+    top:'60px',
     left:'50%',
     fill:'none',
-    stroke:{'#61DAFB': '#eee', easing: 'cubic.out'},
+    stroke:{'#F0B400': '#000000', easing: 'cubic.out'},
     strokeWidth:{ 1 : 0 },
     strokeDasharray:'100%',
     strokeDashoffset:{ '-100%' : '100%' },
@@ -27,11 +27,11 @@ const burst = ()=> {
   new mojs.Shape({
     shape:        'polygon',
     points: 24,
-    scale:         { 1.2 : 1.5 },
-    top: 					 '70px',
+    scale:         { 0.8 : 1 },
+    top: 					 '60px',
     left: 				 '50%',
     fill: 				 'none',
-    stroke: 			 {'#F0B400': '#eee', easing: 'cubic.out'},
+    stroke: 			 {'tomato': '#eee', easing: 'cubic.out'},
     strokeWidth:   { 1: 0 },
     strokeDasharray: '100%',
     strokeDashoffset: { '-100%' : '100%' },
@@ -52,13 +52,14 @@ const header = {
 const logo = {
   marginTop: 20,
   height: 75,
-  marginBottom: '-40px',
+  marginBottom: '-20px',
 }
 const title = {
-  fontFamily: 'Roboto, sans-serif',
+  fontFamily: 'Spectral SC, serif',
   fontWeight: 100,
-  fontSize: '3em',
-  color: '#61DAFB'
+  fontSize: '2em',
+  color: '#61DAFB',
+  opacity: 0.8,
 }
 
 const Main = observer (
@@ -68,8 +69,8 @@ const Main = observer (
         <div style={container}>
           {burst()}
           <section style={header}>
-            <img src={crown} style={logo} alt="logo" />
-            <h1 style={title}>XV</h1>
+            <img src={Swords} style={logo} alt="logo" />
+            <h1 style={title}>AMZ</h1>
           </section>
           <br/>
           <Nav/>
@@ -79,5 +80,4 @@ const Main = observer (
     }
   }
 )
-
 export default Main
