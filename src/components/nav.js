@@ -6,12 +6,12 @@ const observe = new NavObservables()
 const container = { backgroundColor: 'transparent'}
 const nav = {
   borderRadius: 2,
-  cursor: 'pointer',
   backgroundColor: 'transparent',
   color: '#F0B400'
 }
 const item = {
   color: 'tomato',
+  cursor: 'pointer',
   fontFamily: 'Spectral SC, serif'
 }
 const NAV = observer (

@@ -42,7 +42,7 @@ import Footer from './footer'
 //   }).play()
 // } 
 const container = {
-  background: `url(${chalk})`,
+  backgroundImage: `url(${chalk})`,
   height: window.innerHeight
 }
 const header = {

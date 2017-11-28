@@ -15,8 +15,6 @@ class NavObservables {
       renderComponent: computed(c=> {
         switch(this.active){
           case 'General': return <General/>
-          case 'Attack': return <Defense name='Attack'/>
-          case 'Defense': return <Defense name='Defense'/>
           case 'Hero': return <Defense name='Hero'/>
           case 'Guild': return <Guild name='Guild'/>
           default: return <General/>
