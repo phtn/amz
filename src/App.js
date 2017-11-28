@@ -7,40 +7,40 @@ import 'semantic-ui-css/semantic.min.css'
 import chalk from './chalkboard.jpg'
 import Nav from './components/nav'
 import Footer from './footer'
-const burst = ()=> {
-  new mojs.Shape({
-    shape:'circle',
-    points:6,
-    scale:1,
-    top:'60px',
-    left:'50%',
-    fill:'none',
-    stroke:{'#F0B400': '#000000', easing: 'cubic.out'},
-    strokeWidth:{ 1 : 0 },
-    strokeDasharray:'100%',
-    strokeDashoffset:{ '-100%' : '100%' },
-    duration:2500,
-    angle:{ 0: 180 },
-    easing:'cubic.out',
-    repeat:5
-  }).play()
-  new mojs.Shape({
-    shape:        'polygon',
-    points: 24,
-    scale:         { 0.8 : 1 },
-    top: 					 '60px',
-    left: 				 '50%',
-    fill: 				 'none',
-    stroke: 			 {'tomato': '#eee', easing: 'cubic.out'},
-    strokeWidth:   { 1: 0 },
-    strokeDasharray: '100%',
-    strokeDashoffset: { '-100%' : '100%' },
-    duration:      2500,
-    angle:        { 0: 180 },
-    easing:        'cubic.out',
-    repeat: 			5
-  }).play()
-} 
+// const burst = ()=> {
+//   new mojs.Shape({
+//     shape:'circle',
+//     points:6,
+//     scale:1,
+//     top:'60px',
+//     left:'50%',
+//     fill:'none',
+//     stroke:{'#F0B400': '#000000', easing: 'cubic.out'},
+//     strokeWidth:{ 1 : 0 },
+//     strokeDasharray:'100%',
+//     strokeDashoffset:{ '-100%' : '100%' },
+//     duration:2500,
+//     angle:{ 0: 180 },
+//     easing:'cubic.out',
+//     repeat:5
+//   }).play()
+//   new mojs.Shape({
+//     shape:        'polygon',
+//     points: 24,
+//     scale:         { 0.8 : 1 },
+//     top: 					 '60px',
+//     left: 				 '50%',
+//     fill: 				 'none',
+//     stroke: 			 {'tomato': '#eee', easing: 'cubic.out'},
+//     strokeWidth:   { 1: 0 },
+//     strokeDasharray: '100%',
+//     strokeDashoffset: { '-100%' : '100%' },
+//     duration:      2500,
+//     angle:        { 0: 180 },
+//     easing:        'cubic.out',
+//     repeat: 			5
+//   }).play()
+// } 
 const container = {
   background: `url(${chalk})`,
   backgroundRepeat: 'repeat',
@@ -59,7 +59,7 @@ const title = {
   fontWeight: 100,
   fontSize: '2em',
   color: '#61DAFB',
-  opacity: 0.8,
+  // opacity: 0.5,
 }
 
 const Main = observer (
@@ -67,7 +67,6 @@ const Main = observer (
     render() {
       return (
         <div style={container}>
-          {burst()}
           <section style={header}>
             <img src={Swords} style={logo} alt="logo" />
             <h1 style={title}>AMZ</h1>
