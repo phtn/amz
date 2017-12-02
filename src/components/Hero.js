@@ -26,28 +26,32 @@ const Hero = observer (
     render(){
       return (
         <Grid divided='vertically' centered style={grid}>
-          <Grid.Row><h2 style={title}>Gear Comparison</h2></Grid.Row>
+          <Grid.Row><h2 style={title} onClick={()=> observe.loop()}>Gear Comparison</h2></Grid.Row>
           <Grid.Row>
             <Grid.Column width={8}>
               <Dropdown 
                 button floating fluid
                 style={dropdown} 
                 options={options}
+                
                 onChange={(e)=> observe.leftDropdown(e.target.innerText)}
                 defaultValue={observe.left} />
             </Grid.Column>
             <Grid.Column width={8}>
-            <Dropdown 
+              <Dropdown 
+                button floating fluid
                 style={dropdown} 
-                button floating fluid 
-                options={options} 
+                options={options}
+                onChange={(e)=> observe.rightDropdown(e.target.innerText)}
                 defaultValue={options[2].value} />
-            </Grid.Column>
+              </Grid.Column>
           </Grid.Row>
           <Grid.Column width={8}>
             {observe.leftColumn}
           </Grid.Column>
-          <Grid.Column width={8}>helo</Grid.Column>
+          <Grid.Column width={8}>
+            {observe.rightColumn}
+          </Grid.Column>
         </Grid>
       )
     }

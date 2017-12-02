@@ -43,7 +43,8 @@ import Footer from './footer'
 // } 
 const container = {
   backgroundImage: `url(${chalk})`,
-  height: window.innerHeight
+  height: 'auto',
+  width: 'auto'
 }
 const header = {
   textAlign: 'center',
