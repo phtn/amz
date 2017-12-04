@@ -15,7 +15,7 @@ class HeroObservables {
       leftStore: computed(c=> {return this.leftStoreId = c}),
       leftColumn: computed(c=>{
         switch(this.left){
-          case 'Hunter': return <Gear items={LeftStore[0]}/>
+          case 'Hunter': return <Gear items={this.leftArray.map(i=> {return i})}/>
           case 'Gunslinger': return <Gear name='Gunslinger'/>
           case 'Sentinel': return <Gear name='Sentinel'/>
           case 'Arbiter': return <Gear name='Arbiter'/>
@@ -30,11 +30,14 @@ class HeroObservables {
       // tEST
       leftArray: [],
       loop: action(a=> {
-        for (var i=0; i< LeftStore[0].length - 1; i++){
-          console.log(LeftStore[i].attr[0].name)
+        for (var i in LeftStore){
+          return this.leftArray = LeftStore[i]
+          // let res = LeftStore[i].map(c=> c.name)
+          //   for (let items in res)
+          //   console.log(res[items])
         }
       }),
-
+     
 
       right: 'Sentinel',
       rightDropdown: action(a=> {

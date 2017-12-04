@@ -23,7 +23,9 @@ const observe = new HeroObservables()
 
 const Hero = observer (
   class HeroComponent extends Component {
+
     render(){
+      observe.loop()
       return (
         <Grid divided='vertically' centered style={grid}>
           <Grid.Row><h2 style={title} onClick={()=> observe.loop()}>Gear Comparison</h2></Grid.Row>

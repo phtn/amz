@@ -11,13 +11,18 @@ const segment = {
   height: window.innerHeight
 }
 class Gear extends Component {
-  render(){
 
+  componentWillMount(){
+    if (this.props.items !== undefined){
+      this.props.items.map(i=> { console.log(i.name)})
+    }
+  }
+  render(){
     return (
       <div>
         <Segment style={segment}>
-           
           
+           {/* <ol>{this.getItems()}</ol> */}
         </Segment>
       </div>
     )
