@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
-import { Grid, Divider, Dropdown } from 'semantic-ui-react'
+import { Grid, Dropdown } from 'semantic-ui-react'
 import HeroObservables from '../observables/heroObservable'
 
 const grid = { margin: 5, textAlign: 'center'}

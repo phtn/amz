@@ -45,7 +45,7 @@ class HeroObservables {
       }),
       rightColumn: computed(c=> {
         switch(this.right){
-          case 'Hunter': return <Gear name={GearStore.hunter.name}/>
+          case 'Hunter': return <Gear name=''/>
           case 'Gunslinger': return <Gear name='Gunslinger'/>
           case 'Sentinel': return <Gear name='Sentinel'/>
           case 'Arbiter': return <Gear name='Arbiter'/>

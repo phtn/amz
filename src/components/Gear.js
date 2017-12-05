@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Image, List } from 'semantic-ui-react'
+import { Segment, Image, List, Divider } from 'semantic-ui-react'
 // import Sword from '../assets/sword.svg'
 import Helmet from '../assets/helmet.svg'
 // import Armor from '../assets/armor.svg'
@@ -11,6 +11,7 @@ const segment = {
   padding: 0,
   border: '1px solid red'
 }
+const list = {height: 300}
 class Gear extends Component {
 
   getItems(){
@@ -22,8 +23,10 @@ class Gear extends Component {
           <List.Header>{i.name}</List.Header>
         </List.Content>
         <List.Content>
-          <List>{this.getAttr(i.attr)}</List>
+          <List size='mini' divided >{this.getAttr(i.attr)}</List>
         </List.Content>
+        <Divider/>
+        
       </List.Item>
       ))
     }
@@ -32,11 +35,11 @@ class Gear extends Component {
     if (attr !== undefined){
       return attr.map(a=> (
         <List.Item key={a.key}>
-          <List.Content>
-            {a.name}
+          <List.Content verticalAlign='middle' floated='right'>
+            {a.value[0]}
           </List.Content>
-          <List.Content floated='right'>
-            {a.key}
+          <List.Content verticalAlign='middle'>
+            {a.name}
           </List.Content>
         </List.Item>
       ))
@@ -46,7 +49,7 @@ class Gear extends Component {
     return (
       <div>
         <Segment style={segment}>
-          <List selection verticalAlign='middle'>
+          <List selection verticalAlign='middle' style={list}>
             {this.getItems()}
           </List>
         </Segment>
