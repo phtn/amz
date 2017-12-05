@@ -4,7 +4,7 @@ import { Image, List, Divider, Grid } from 'semantic-ui-react'
 import Royal from '../assets/royal.svg'
 import Head from '../assets/head.svg'
 
-const container = {padding: 5, color: '#999', textAlign: 'center'}
+const container = {padding: 5, color: '#999', textAlign: 'center', height: window.innerHeight}
 const name={color: '#61DAFB'}
 const desc = {color: '#666', fontFamily: 'Spectral SC, serif'}
 

@@ -4,7 +4,8 @@ import XV from '../assets/xvlogo.png'
 const container = {
   padding: 5,
   color: '#999',
-  textAlign: 'center'
+  textAlign: 'center',
+  height: window.innerHeight
 }
 const segment = {
   backgroundColor: 'transparent'

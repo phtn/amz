@@ -3,59 +3,66 @@ import { action, computed, extendObservable } from 'mobx'
 import Gear from '../components/Gear'
 import GearStore from './GearStore'
 
-const LeftStore = [GearStore.hunter]
+const gearStore = [GearStore.hunter,GearStore.gunslinger,GearStore.sentinel,GearStore.arbiter,GearStore.assasin, GearStore.aranea,GearStore.undertaker, GearStore.reaper]
 class HeroObservables {
   constructor(){
     extendObservable(this, {
       left: 'Hunter',
+      right: 'Sentinel',
+      
       leftDropdown: action(a=> {
-        return this.left = a
+        return this.leftStoreId = this.dropdownArr.indexOf(a)
       }),
+      rightDropdown: action(a=> {
+        return this.rightStoreId = this.dropdownArr.indexOf(a)
+      }),
+
+      dropdownArr: ['Hunter', 'Gunslinger', 'Sentinel', 'Arbiter', 'Winged Assasin', 'Aranea', 'Undertaker', 'Reaper'],
       leftStoreId: 0,
-      leftStore: computed(c=> {return this.leftStoreId = c}),
+      rightStoreId: 2,
+      // leftStore: computed(c=> {return this.leftStoreId = c}),
       leftColumn: computed(c=>{
-        switch(this.left){
-          case 'Hunter': return <Gear items={this.leftArray.map(i=> {return i})}/>
-          case 'Gunslinger': return <Gear name='Gunslinger'/>
-          case 'Sentinel': return <Gear name='Sentinel'/>
-          case 'Arbiter': return <Gear name='Arbiter'/>
-          case 'Winged Assasin': return <Gear name='Winged Assasin'/>
-          case 'Aranea': return <Gear name='Aranea'/>
-          case 'Undertaker': return <Gear name='Undertaker'/>
-          case 'Reaper': return <Gear name='Reaper'/>
-          default: return <Gear name={this.left}/>
+        switch(this.leftStoreId){
+          case 0: return <Gear items={gearStore[0]}/>
+          case 1: return <Gear items={gearStore[1]}/>
+          case 2: return <Gear items={gearStore[2]}/>
+          case 3: return <Gear items={gearStore[3]}/>
+          case 4: return <Gear items={gearStore[4]}/>
+          case 5: return <Gear items={gearStore[5]}/>
+          case 6: return <Gear items={gearStore[6]}/>
+          case 7: return <Gear items={gearStore[7]}/>
+          
+          default: return <Gear items={gearStore[0]}/>
         }
       }),
+      rightColumn: computed(c=>{
+        switch(this.rightStoreId){
+          case 0: return <Gear items={gearStore[0]}/>
+          case 1: return <Gear items={gearStore[1]}/>
+          case 2: return <Gear items={gearStore[2]}/>
+          case 3: return <Gear items={gearStore[3]}/>
+          case 4: return <Gear items={gearStore[4]}/>
+          case 5: return <Gear items={gearStore[5]}/>
+          case 6: return <Gear items={gearStore[6]}/>
+          case 7: return <Gear items={gearStore[7]}/>
+          
+          default: return <Gear items={gearStore[2]}/>
+        }
+      }),
+
       
       // tEST
-      leftArray: [],
+      // leftArray: [],
       loop: action(a=> {
-        for (var i in LeftStore){
-          return this.leftArray = LeftStore[i]
-          // let res = LeftStore[i].map(c=> c.name)
-          //   for (let items in res)
-          //   console.log(res[items])
-        }
+        // console.log(this.leftStoreId)
+        // for (var i in gearStore[this.leftStoreId]){
+        //   // return this.leftArray = gearStore[a]
+        // }
       }),
      
 
-      right: 'Sentinel',
-      rightDropdown: action(a=> {
-        return this.right = a
-      }),
-      rightColumn: computed(c=> {
-        switch(this.right){
-          case 'Hunter': return <Gear name=''/>
-          case 'Gunslinger': return <Gear name='Gunslinger'/>
-          case 'Sentinel': return <Gear name='Sentinel'/>
-          case 'Arbiter': return <Gear name='Arbiter'/>
-          case 'Winged Assasin': return <Gear name='Winged Assasin'/>
-          case 'Aranea': return <Gear name='Aranea'/>
-          case 'Undertaker': return <Gear name='Undertaker'/>
-          case 'Reaper': return <Gear name='Reaper'/>
-          default: return <Gear name={this.right}/>
-        }
-      }),
+      
+      
       color: 1
     })
   }

@@ -23,19 +23,20 @@ const observe = new HeroObservables()
 
 const Hero = observer (
   class HeroComponent extends Component {
-
-    render(){
+    componentWillMount(){
       observe.loop()
+    }
+    render(){
+      
       return (
         <Grid divided='vertically' centered style={grid}>
-          <Grid.Row><h2 style={title} onClick={()=> observe.loop()}>Gear Comparison</h2></Grid.Row>
+          <Grid.Row><h2 style={title}>Gear Comparison</h2></Grid.Row>
           <Grid.Row>
             <Grid.Column width={8}>
               <Dropdown 
                 button floating fluid
                 style={dropdown} 
                 options={options}
-                
                 onChange={(e)=> observe.leftDropdown(e.target.innerText)}
                 defaultValue={observe.left} />
             </Grid.Column>
