@@ -6,13 +6,21 @@ import Armor from '../assets/armor.svg'
 import Boot from '../assets/boot.svg'
 import Sword from '../assets/sword.svg'
 import Necklace from '../assets/necklace.svg'
-import Mitten from '../assets/mitten.svg'
+// import Mitten from '../assets/mitten.svg'
 
 const segment = {
-  // background: 'rgba(238,238,238,0.8)',
+  background: 'rgba(0,0,0,0.8)',
   height: window.innerHeight,
   padding: 0,
   // border: '1px solid red'
+}
+const title = {
+  color: '#ffd454',
+  fontFamily: 'Spectral SC'
+}
+const text = {
+  color: 'white',
+  fontWeight: 'bold'
 }
 const svg = [Helmet, Armor, Boot, Sword, Necklace, Necklace, Necklace]
 const list = {height: 80}
@@ -22,16 +30,15 @@ class Gear extends Component {
     if (this.props.items !== undefined){
       return this.props.items.map(i=> (
         <List.Item key={i.key}>
-        <Image avatar src={svg[i.key]} />
-        <List.Content>
-          <List.Header>{i.name}</List.Header>
-        </List.Content>
-        <List.Content>
-          <List size='mini' divided style={list}>{this.getAttr(i.attr)}</List>
-        </List.Content>
-        <Divider/>
-        
-      </List.Item>
+          <Image avatar src={svg[i.key]} size='mini'/>
+          <List.Content>
+            <List.Header style={title}>{i.name}</List.Header>
+          </List.Content>
+          <List.Content>
+            <List size='mini' divided style={list}>{this.getAttr(i.attr)}</List>
+          </List.Content>
+          <Divider/>
+        </List.Item>
       ))
     }
   }
@@ -39,10 +46,10 @@ class Gear extends Component {
     if (attr !== undefined){
       return attr.map(a=> (
         <List.Item key={a.key}>
-          <List.Content verticalAlign='middle' floated='right'>
-            {a.value[0]}
+          <List.Content verticalAlign='middle' floated='right' style={text}>
+            {a.value[this.props.color]}
           </List.Content>
-          <List.Content verticalAlign='middle'>
+          <List.Content verticalAlign='middle' style={text}>
             {a.name}
           </List.Content>
         </List.Item>

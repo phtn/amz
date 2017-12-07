@@ -26,6 +26,31 @@ const gears = {
     ]
   }, //
   { key: 1,
+    name: "Hunter's Carapace",
+    type: 'Armour',
+    desc: "An impenetrable shell, fitting for master Hunter.",
+    attr: [
+      { key: 0,
+        name: "Troop Armor Bonus",
+        value: [
+          '15%', '25%', '38%', '54%', '72%', '91%'
+        ]
+      },
+      { key: 1,
+        name: "Streak per Attack",
+        value: [
+          '1', '1%', '1%', '1%', '2%', '2%'
+        ]
+      },
+      { key: 2,
+        name: "Max MP",
+        value: [
+          '120', '200', '310', '430', '580', '730'
+        ]
+      }
+    ]
+  }, //
+  { key: 2,
     name: "Hunter's Armour",
     type: 'Helmet',
     desc: "The hunted adorn this grisly trophy.",

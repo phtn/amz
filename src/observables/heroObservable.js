@@ -23,30 +23,30 @@ class HeroObservables {
       // leftStore: computed(c=> {return this.leftStoreId = c}),
       leftColumn: computed(c=>{
         switch(this.leftStoreId){
-          case 0: return <Gear items={gearStore[0]}/>
-          case 1: return <Gear items={gearStore[1]}/>
-          case 2: return <Gear items={gearStore[2]}/>
-          case 3: return <Gear items={gearStore[3]}/>
-          case 4: return <Gear items={gearStore[4]}/>
-          case 5: return <Gear items={gearStore[5]}/>
-          case 6: return <Gear items={gearStore[6]}/>
-          case 7: return <Gear items={gearStore[7]}/>
+          case 0: return <Gear items={gearStore[0]} color={this.color}/>
+          case 1: return <Gear items={gearStore[1]} color={this.color}/>
+          case 2: return <Gear items={gearStore[2]} color={this.color}/>
+          case 3: return <Gear items={gearStore[3]} color={this.color}/>
+          case 4: return <Gear items={gearStore[4]} color={this.color}/>
+          case 5: return <Gear items={gearStore[5]} color={this.color}/>
+          case 6: return <Gear items={gearStore[6]} color={this.color}/>
+          case 7: return <Gear items={gearStore[7]} color={this.color}/>
           
-          default: return <Gear items={gearStore[0]}/>
+          default: return <Gear items={gearStore[0]} color={this.color}/>
         }
       }),
       rightColumn: computed(c=>{
         switch(this.rightStoreId){
-          case 0: return <Gear items={gearStore[0]}/>
-          case 1: return <Gear items={gearStore[1]}/>
-          case 2: return <Gear items={gearStore[2]}/>
-          case 3: return <Gear items={gearStore[3]}/>
-          case 4: return <Gear items={gearStore[4]}/>
-          case 5: return <Gear items={gearStore[5]}/>
-          case 6: return <Gear items={gearStore[6]}/>
-          case 7: return <Gear items={gearStore[7]}/>
+          case 0: return <Gear items={gearStore[0]} color={this.color}/>
+          case 1: return <Gear items={gearStore[1]} color={this.color}/>
+          case 2: return <Gear items={gearStore[2]} color={this.color}/>
+          case 3: return <Gear items={gearStore[3]} color={this.color}/>
+          case 4: return <Gear items={gearStore[4]} color={this.color}/>
+          case 5: return <Gear items={gearStore[5]} color={this.color}/>
+          case 6: return <Gear items={gearStore[6]} color={this.color}/>
+          case 7: return <Gear items={gearStore[7]} color={this.color}/>
           
-          default: return <Gear items={gearStore[2]}/>
+          default: return <Gear items={gearStore[2]} color={this.color}/>
         }
       }),
 
@@ -63,7 +63,7 @@ class HeroObservables {
 
       
       
-      color: 1
+      color: 0
     })
   }
 }
