@@ -6,7 +6,7 @@ import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 import chalk from './chalkboard.jpg'
 import Nav from './components/nav'
-import Footer from './footer'
+// import Footer from './footer'
 // const burst = ()=> {
 //   new mojs.Shape({
 //     shape:'circle',
@@ -73,7 +73,6 @@ const Main = observer (
           </section>
           <br/>
           <Nav/>
-          <Footer/>
         </div>
       )
     }

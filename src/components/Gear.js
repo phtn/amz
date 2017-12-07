@@ -16,10 +16,11 @@ const segment = {
 }
 const title = {
   color: '#ffd454',
-  fontFamily: 'Spectral SC'
+  fontFamily: 'Spectral SC, serif',
+  fontSize: 10
 }
 const text = {
-  color: 'white',
+  color: '#eee',
   fontWeight: 'bold'
 }
 const svg = [Helmet, Armor, Boot, Sword, Necklace, Necklace, Necklace]
