@@ -100,6 +100,19 @@ const gears = {
       }
     ]
   },
+  { key: 4,
+    name: "Hunter's Insignia",
+    type: 'Weapons',
+    desc: "Twin claws that can bypass any defense.",
+    attr: [
+      { key: 0,
+        name: "Max MP",
+        value: [
+          '240', '390', '610', '860', '1,150', '1,450'
+        ]
+      }
+    ]
+  },
 
   ],
   gunslinger: [

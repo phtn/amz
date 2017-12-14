@@ -17,7 +17,8 @@ import Necklace from '../assets/necklace.svg'
 const segment = {
   background: 'rgba(0,0,0,0.8)',
   height: 'auto',
-  paddingBottom: 200,
+  width: 'auto',
+  padding: 0,
   // border: '1px solid red'
 }
 const settings = {
@@ -45,23 +46,31 @@ const title = {
 const text = {
   color: '#eee',
   fontWeight: 'bold',
+  fontSize: 8,
   height: 1
 }
 const values = {
   color: '#eee',
+  width: 50,
+  fontSize: 9,
   textAlign: 'right',
-  width: 100
 }
+
 const svg = [Helmet, Armor, Boot, Sword, Necklace, Necklace, Necklace]
 const list = {height: 100}
 
 const gear = observer (
   class Gear extends Component {
-   getProps(){
-     console.log(this.props.slide)
+    constructor(props){
+      super(props)
+      this.getSlide = this.getSlide.bind(this)
+    }
+   getSlide(slide){
+    //  this.refs.slider.slickGoTo(slide)
    }
    getValues(a,b,c,d,e,f){
-     return <Slider {...settings}>
+     this.getSlide(1)
+     return <Slider ref='slider' {...settings}>
       <div>{a}</div>
       <div>{b}</div>
       <div>{c}</div>
@@ -82,17 +91,17 @@ const gear = observer (
                 
                 
                   
-                  <List.Content verticalAlign='middle' floated='right' style={values}>  
-                  {this.getValues(a.value[0],a.value[1],a.value[2],a.value[3],a.value[4],a.value[5],)}
-                  </List.Content>
-                  
-                  
-                
-                
-                
-                <List.Content verticalAlign='middle' style={text}>
-                  {a.name}
-                </List.Content>
+            <List.Content verticalAlign='middle' floated='right' style={values}>  
+              {this.getValues(a.value[0],a.value[1],a.value[2],a.value[3],a.value[4],a.value[5],)}
+            </List.Content>
+              
+              
+            
+            
+            
+            <List.Content verticalAlign='middle' style={text}>
+              {a.name}
+            </List.Content>
               
               
             
@@ -121,7 +130,7 @@ const gear = observer (
     
   
     render(){
-      this.getProps()
+      
       return (
         <div>
           <Segment style={segment}>
