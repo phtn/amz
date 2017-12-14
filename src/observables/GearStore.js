@@ -51,30 +51,55 @@ const gears = {
     ]
   }, //
   { key: 2,
-    name: "Hunter's Armour",
-    type: 'Helmet',
-    desc: "The hunted adorn this grisly trophy.",
+    name: "Hunter's Tracks",
+    type: 'Footwear',
+    desc: "Good things come to those who wait.",
     attr: [
       { key: 0,
-        name: "Troop Armor Bonus",
+        name: "Troop HP Bonus",
         value: [
-          '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+          '2%', '3%', '5%', '7%', '9%', '11%'
         ]
       },
       { key: 1,
-        name: "Hero Critical Hit",
+        name: "Gathering March Speed",
         value: [
-          '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
+          '5%', '6%', '9%', '12%', '15%', '18%'
+        ]
+      },
+      { key: 2,
+        name: "Monster March Speed",
+        value: [
+          '9%', '13%', '17%', '23%', '29%', '35%'
+        ]
+      }
+    ]
+  },
+  { key: 3,
+    name: "Hunter's Shears",
+    type: 'Weapons',
+    desc: "Twin claws that can bypass any defense.",
+    attr: [
+      { key: 0,
+        name: "Loot Tile Gather Speed",
+        value: [
+          '3%', '4%', '6%', '9%', '12%', '15%'
+        ]
+      },
+      { key: 1,
+        name: "Hero Attack Bonus",
+        value: [
+          '2%', '3%', '4%', '6%', '8%', '10%'
         ]
       },
       { key: 2,
         name: "Max MP",
         value: [
-          '121', '202', '313', '434', '586', '737'
+          '190', '310', '490', '690', '920', '1,160'
         ]
       }
     ]
-  }, //
+  },
 
   ],
   gunslinger: [

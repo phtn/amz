@@ -3,6 +3,9 @@ import { observer } from 'mobx-react'
 import { Grid, Dropdown } from 'semantic-ui-react'
 import HeroObservables from '../observables/heroObservable'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css' 
+
 const grid = { margin: 5, textAlign: 'center'}
 // const segment = {backgroundColor: 'transparent'}
 const title = {fontFamily: 'Spectral SC, serif', color: '#666', opacity: 0.8}
@@ -23,9 +26,9 @@ const observe = new HeroObservables()
 
 const Hero = observer (
   class HeroComponent extends Component {
-    componentWillMount(){
-      observe.loop()
-    }
+
+    
+    
     render(){
       
       return (
@@ -38,7 +41,7 @@ const Hero = observer (
                 style={dropdown} 
                 options={options}
                 onChange={(e)=> observe.leftDropdown(e.target.innerText)}
-                defaultValue={observe.left} />
+                defaultValue={options[0].value} />
             </Grid.Column>
             <Grid.Column width={8}>
               <Dropdown 
@@ -50,11 +53,15 @@ const Hero = observer (
               </Grid.Column>
           </Grid.Row>
           <Grid.Column width={8}>
+          
             {observe.leftColumn}
           </Grid.Column>
           <Grid.Column width={8}>
             {observe.rightColumn}
           </Grid.Column>
+          
+          {this.props.footer}
+          
         </Grid>
       )
     }

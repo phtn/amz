@@ -4,6 +4,8 @@ import React from 'react'
 import General from '../components/General'
 import Hero from '../components/Hero'
 import Guild from '../components/Guild'
+import GearLevel from '../components/GearLevel'
+import Footer from '../footer'
 
 class NavObservables {
   constructor(){
@@ -14,9 +16,9 @@ class NavObservables {
       }),
       renderComponent: computed(c=> {
         switch(this.active){
-          case 'General': return <General/>
-          case 'Hero': return <Hero name='Hero'/>
-          case 'Guild': return <Guild name='Guild'/>
+          case 'General': return <General footer={<Footer/>}/>
+          case 'Hero': return <Hero name='Hero' footer={<GearLevel/>}/>
+          case 'Guild': return <Guild name='Guild' footer={<Footer/>}/>
           default: return <General/>
         }
       })

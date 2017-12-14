@@ -20,5 +20,6 @@ export default props => (
     <br/>
     <p style={spectral}>Final Fantasy XV: New Empire</p>
     </Segment>
+    {props.footer}
   </div>
 )

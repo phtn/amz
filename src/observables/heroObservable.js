@@ -2,13 +2,15 @@ import React from 'react'
 import { action, computed, extendObservable } from 'mobx'
 import Gear from '../components/Gear'
 import GearStore from './GearStore'
+import Attributes from '../components/Attributes'
 
 const gearStore = [GearStore.hunter,GearStore.gunslinger,GearStore.sentinel,GearStore.arbiter,GearStore.assasin, GearStore.aranea,GearStore.undertaker, GearStore.reaper]
+const colors = [0,1,2,3,4,5]
 class HeroObservables {
   constructor(){
     extendObservable(this, {
-      left: 'Hunter',
-      right: 'Sentinel',
+      // left: 'Hunter',
+      // right: 'Sentinel',
       
       leftDropdown: action(a=> {
         return this.leftStoreId = this.dropdownArr.indexOf(a)
@@ -23,47 +25,54 @@ class HeroObservables {
       // leftStore: computed(c=> {return this.leftStoreId = c}),
       leftColumn: computed(c=>{
         switch(this.leftStoreId){
-          case 0: return <Gear items={gearStore[0]} color={this.color}/>
-          case 1: return <Gear items={gearStore[1]} color={this.color}/>
-          case 2: return <Gear items={gearStore[2]} color={this.color}/>
-          case 3: return <Gear items={gearStore[3]} color={this.color}/>
-          case 4: return <Gear items={gearStore[4]} color={this.color}/>
-          case 5: return <Gear items={gearStore[5]} color={this.color}/>
-          case 6: return <Gear items={gearStore[6]} color={this.color}/>
-          case 7: return <Gear items={gearStore[7]} color={this.color}/>
+          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings}/>
+          case 1: return <Gear items={gearStore[1]} slide={this.slideSettings}/>
+          case 2: return <Gear items={gearStore[2]} slide={this.slideSettings}/>
+          case 3: return <Gear items={gearStore[3]} slide={this.slideSettings}/>
+          case 4: return <Gear items={gearStore[4]} slide={this.slideSettings}/>
+          case 5: return <Gear items={gearStore[5]} slide={this.slideSettings}/>
+          case 6: return <Gear items={gearStore[6]} slide={this.slideSettings}/>
+          case 7: return <Gear items={gearStore[7]} slide={this.slideSettings}/>
           
-          default: return <Gear items={gearStore[0]} color={this.color}/>
+          default: return <Gear items={gearStore[0]} slide={this.slideSettings}/>
         }
       }),
       rightColumn: computed(c=>{
         switch(this.rightStoreId){
-          case 0: return <Gear items={gearStore[0]} color={this.color}/>
-          case 1: return <Gear items={gearStore[1]} color={this.color}/>
-          case 2: return <Gear items={gearStore[2]} color={this.color}/>
-          case 3: return <Gear items={gearStore[3]} color={this.color}/>
-          case 4: return <Gear items={gearStore[4]} color={this.color}/>
-          case 5: return <Gear items={gearStore[5]} color={this.color}/>
-          case 6: return <Gear items={gearStore[6]} color={this.color}/>
-          case 7: return <Gear items={gearStore[7]} color={this.color}/>
+          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings}/>
+          case 1: return <Gear items={gearStore[1]} slide={this.slideSettings}/>
+          case 2: return <Gear items={gearStore[2]} slide={this.slideSettings}/>
+          case 3: return <Gear items={gearStore[3]} slide={this.slideSettings}/>
+          case 4: return <Gear items={gearStore[4]} slide={this.slideSettings}/>
+          case 5: return <Gear items={gearStore[5]} slide={this.slideSettings}/>
+          case 6: return <Gear items={gearStore[6]} slide={this.slideSettings}/>
+          case 7: return <Gear items={gearStore[7]} slide={this.slideSettings}/>
           
-          default: return <Gear items={gearStore[2]} color={this.color}/>
+          default: return <Gear items={gearStore[2]} slide={this.slideSettings}/>
         }
       }),
 
-      
-      // tEST
-      // leftArray: [],
-      loop: action(a=> {
-        // console.log(this.leftStoreId)
-        // for (var i in gearStore[this.leftStoreId]){
-        //   // return this.leftArray = gearStore[a]
-        // }
+      slideSettings: computed((s)=> {
+        return {
+          arrows: false,
+          infinite: false,
+          dots: false,
+          speed: 500,
+          vertical: false,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          fade: true,
+        }
       }),
-     
+    
 
       
       
-      color: 0
+      getColor: action(a=> {
+        console.log(a)
+        this.activeColor = a
+      })
+
     })
   }
 }

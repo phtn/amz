@@ -85,6 +85,7 @@ export default props => (
 
     </List>
     
+    {props.footer}
 
   </div>
 )
