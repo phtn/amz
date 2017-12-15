@@ -3,7 +3,6 @@ import { observer } from 'mobx-react'
 import { Segment, Image, List, Divider } from 'semantic-ui-react'
 import Slider from 'react-slick'
 
-import HeroObservables from '../observables/heroObservable'
 
 import Helmet from '../assets/helmet.svg'
 import Armor from '../assets/armor.svg'
@@ -33,11 +32,9 @@ const settings = {
   centerMode: false,
   slidesToScroll: 1,
   slidesToShow: 1,
+  ref: ref=> this.slider = ref
 }
-const slide = {
-  width: 100,
-  border: '1px solid red',
-}
+
 const title = {
   color: '#ffd454',
   fontFamily: 'Spectral SC, serif',
@@ -69,7 +66,7 @@ const gear = observer (
     //  this.refs.slider.slickGoTo(slide)
    }
    getValues(a,b,c,d,e,f){
-     this.getSlide(1)
+    //  this.getSlide(this.props.color)
      return <Slider ref='slider' {...settings}>
       <div>{a}</div>
       <div>{b}</div>
@@ -79,8 +76,14 @@ const gear = observer (
       <div>{f}</div>
      </Slider>
    }
-   componentDidMount(){
-
+  componentWillReceiveProps(props){
+    // this.refs.slider.slickGoTo(this.props.color)
+    // console.log(this.refs.slider.slickGoTo(this.props.color))
+    // this.slider.slickGoTo(this.props.color)
+  }
+  componentDidMount(){
+    console.log(this.props.color)
+    // this.slider.slickGoTo(this.props.color)
   }
     getAttr(attr, sett){
       if (attr !== undefined){

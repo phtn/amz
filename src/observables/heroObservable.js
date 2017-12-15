@@ -2,10 +2,9 @@ import React from 'react'
 import { action, computed, extendObservable } from 'mobx'
 import Gear from '../components/Gear'
 import GearStore from './GearStore'
-import Attributes from '../components/Attributes'
 
 const gearStore = [GearStore.hunter,GearStore.gunslinger,GearStore.sentinel,GearStore.arbiter,GearStore.assasin, GearStore.aranea,GearStore.undertaker, GearStore.reaper]
-const colors = [0,1,2,3,4,5]
+
 class HeroObservables {
   constructor(){
     extendObservable(this, {
@@ -25,7 +24,7 @@ class HeroObservables {
       // leftStore: computed(c=> {return this.leftStoreId = c}),
       leftColumn: computed(c=>{
         switch(this.leftStoreId){
-          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings}/>
+          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings} color={2}/>
           case 1: return <Gear items={gearStore[1]} slide={this.slideSettings}/>
           case 2: return <Gear items={gearStore[2]} slide={this.slideSettings}/>
           case 3: return <Gear items={gearStore[3]} slide={this.slideSettings}/>
@@ -39,9 +38,9 @@ class HeroObservables {
       }),
       rightColumn: computed(c=>{
         switch(this.rightStoreId){
-          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings}/>
-          case 1: return <Gear items={gearStore[1]} slide={this.slideSettings}/>
-          case 2: return <Gear items={gearStore[2]} slide={this.slideSettings}/>
+          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings} color={2}/>
+          case 1: return <Gear items={gearStore[1]} slide={this.slideSettings} color={2}/>
+          case 2: return <Gear items={gearStore[2]} slide={this.slideSettings} color={2}/>
           case 3: return <Gear items={gearStore[3]} slide={this.slideSettings}/>
           case 4: return <Gear items={gearStore[4]} slide={this.slideSettings}/>
           case 5: return <Gear items={gearStore[5]} slide={this.slideSettings}/>
@@ -62,6 +61,7 @@ class HeroObservables {
           autoplay: false,
           autoplaySpeed: 3000,
           fade: true,
+          ref: ref=> this.slider = ref
         }
       }),
     

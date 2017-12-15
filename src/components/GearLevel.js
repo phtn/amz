@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import chalk from '../chalkboard.jpg'
 import { Grid, Button } from 'semantic-ui-react'
 import { observer } from 'mobx-react'
-import HeroObservables from '../observables/heroObservable'
 
 
-const observe = new HeroObservables()
 
 const container = {
   width: window.innerWidth,
