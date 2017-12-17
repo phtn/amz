@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import chalk from '../chalkboard.jpg'
 import { Grid, Button } from 'semantic-ui-react'
 import { observer } from 'mobx-react'
+import HeroObservables from '../observables/heroObservable'
 
+const obs = new HeroObservables()
 
 
 const container = {
@@ -33,7 +35,7 @@ const gearLevel = observer (
         <div style={container}>
           <Grid centered divided='vertically' style={grid}>
             <Grid.Column width={2}>
-              <Button color='grey'></Button>
+              <Button color='grey' onClick={()=> obs.getColor(1)}></Button>
             </Grid.Column>
             <Grid.Column width={2}>
               <Button></Button>

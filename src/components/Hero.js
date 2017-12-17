@@ -33,7 +33,7 @@ const Hero = observer (
       
       return (
         <Grid divided='vertically' centered style={grid}>
-          <Grid.Row><h2 style={title}>Gear Comparison</h2></Grid.Row>
+          <Grid.Row><h2 style={title}>Gear Set Comparison</h2></Grid.Row>
           <Grid.Row>
             <Grid.Column width={8}>
               <Dropdown 

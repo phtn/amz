@@ -24,7 +24,7 @@ class HeroObservables {
       // leftStore: computed(c=> {return this.leftStoreId = c}),
       leftColumn: computed(c=>{
         switch(this.leftStoreId){
-          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings} color={2}/>
+          case 0: return <Gear items={gearStore[0]} slide={this.slideSettings} color={this.color}/>
           case 1: return <Gear items={gearStore[1]} slide={this.slideSettings}/>
           case 2: return <Gear items={gearStore[2]} slide={this.slideSettings}/>
           case 3: return <Gear items={gearStore[3]} slide={this.slideSettings}/>
@@ -53,24 +53,18 @@ class HeroObservables {
 
       slideSettings: computed((s)=> {
         return {
-          arrows: false,
-          infinite: false,
-          dots: false,
-          speed: 500,
-          vertical: false,
-          autoplay: false,
-          autoplaySpeed: 3000,
-          fade: true,
-          ref: ref=> this.slider = ref
+          draggable: false,
+          initialSlide: 5
         }
       }),
     
 
-      
+      color: 5,
       
       getColor: action(a=> {
         console.log(a)
-        this.activeColor = a
+        this.color = a
+        console.log(this.color)
       })
 
     })

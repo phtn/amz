@@ -20,31 +20,23 @@ const segment = {
   padding: 0,
   // border: '1px solid red'
 }
-const settings = {
-  arrows: false,
-  infinite: false,
-  dots: false,
-  speed: 500,
-  vertical: false,
-  autoplay: false,
-  autoplaySpeed: 3000,
-  fade: true,
-  centerMode: false,
-  slidesToScroll: 1,
-  slidesToShow: 1,
-  ref: ref=> this.slider = ref
-}
+
 
 const title = {
   color: '#ffd454',
   fontFamily: 'Spectral SC, serif',
-  fontSize: 10
+  fontSize: 10,
+  maxWidth: '21ch',
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap'
 }
 const text = {
   color: '#eee',
   fontWeight: 'bold',
   fontSize: 8,
-  height: 1
+  height: 1,
+
 }
 const values = {
   color: '#eee',
@@ -67,6 +59,22 @@ const gear = observer (
    }
    getValues(a,b,c,d,e,f){
     //  this.getSlide(this.props.color)
+    const settings = {
+      arrows: false,
+      infinite: false,
+      dots: false,
+      speed: 500,
+      vertical: false,
+      autoplay: false,
+      autoplaySpeed: 3000,
+      fade: true,
+      centerMode: false,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      ...this.props.slide
+    }
+
+    
      return <Slider ref='slider' {...settings}>
       <div>{a}</div>
       <div>{b}</div>
@@ -76,15 +84,20 @@ const gear = observer (
       <div>{f}</div>
      </Slider>
    }
-  componentWillReceiveProps(props){
-    // this.refs.slider.slickGoTo(this.props.color)
-    // console.log(this.refs.slider.slickGoTo(this.props.color))
-    // this.slider.slickGoTo(this.props.color)
-  }
-  componentDidMount(){
-    console.log(this.props.color)
-    // this.slider.slickGoTo(this.props.color)
-  }
+    componentWillReceiveProps(props){
+      // this.slider.slick('slickGoTo',props.color)
+      // console.log(this.refs.slider.slickGoTo(this.props.color))
+      // this.slider.slickGoTo(this.props.color)
+    }
+    componentDidMount(){
+      // this.refs.slider.slickGoTo(this.props.color)
+      // this.slider.slickGoTo(this.props.color)
+      // this.refs.slider.slick('slickGoTo', 1)
+    }
+    componentDidUpdate(){
+      // this.refs.slider.slickGoTo()
+    }
+
     getAttr(attr, sett){
       if (attr !== undefined){
         return attr.map(a=> (
@@ -122,7 +135,7 @@ const gear = observer (
               <List.Header style={title}>{i.name}</List.Header>
             </List.Content>
             <List.Content>
-              <List size='mini' divided style={list}>{this.getAttr(i.attr, settings)}</List>
+              <List size='mini' divided style={list}>{this.getAttr(i.attr)}</List>
             </List.Content>
             <Divider/>
           </List.Item>
@@ -133,7 +146,6 @@ const gear = observer (
     
   
     render(){
-      
       return (
         <div>
           <Segment style={segment}>

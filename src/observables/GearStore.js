@@ -189,7 +189,7 @@ const gears = {
             '1%', '2%', '3%', '5%', '6%', '8%'
           ]
         },
-        { key: 2,
+        { key: 3,
           name: "Attack March Speed",
           value: [
             '7%', '10%', '14%', '18%', '24%', '29%'
@@ -465,7 +465,7 @@ arbiter: [
       }
     ]
   },
-  { key: 4,
+  { key: 5,
     name: "Arbiter's Talisman",
     type: 'Accessories',
     desc: "A shining medallion won by commanders of past battles.",
