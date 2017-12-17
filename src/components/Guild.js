@@ -22,7 +22,7 @@ export default props => (
         <Image avatar src={Royal}/>
         <List.Content>
           <List.Header style={name}>AmazonsPrime</List.Header>
-          <List.Description style={desc}>R5 - Leader</List.Description>
+          <List.Description style={desc}>V - Leader</List.Description>
         </List.Content>
       </List.Item>
       <Divider/>
@@ -32,7 +32,7 @@ export default props => (
         <Image avatar src={Head}/>
         <List.Content>
           <List.Header style={name}>Lyandra</List.Header>
-          <List.Description style={desc}>R4 - VP</List.Description>
+          <List.Description style={desc}>IV - VP</List.Description>
         </List.Content>
       </List.Item>
       </Grid.Column>
@@ -41,7 +41,7 @@ export default props => (
         <Image avatar src={Head}/>
         <List.Content>
           <List.Header style={name}>ThereforeIAm</List.Header>
-          <List.Description style={desc}>R4 - War Chief</List.Description>
+          <List.Description style={desc}>IV - War Chief</List.Description>
         </List.Content>
       </List.Item>
       </Grid.Column>
@@ -50,7 +50,7 @@ export default props => (
         <Image avatar src={Head}/>
         <List.Content>
           <List.Header style={name}>Whos Juicy</List.Header>
-          <List.Description style={desc}>R4 - Event Master</List.Description>
+          <List.Description style={desc}>IV - Event Master</List.Description>
         </List.Content>
       </List.Item>
       </Grid.Column>
@@ -59,7 +59,7 @@ export default props => (
         <Image avatar src={Head}/>
         <List.Content>
           <List.Header style={name}>Lord Organic</List.Header>
-          <List.Description style={desc}>R4</List.Description>
+          <List.Description style={desc}>IV</List.Description>
         </List.Content>
       </List.Item>
       </Grid.Column>
@@ -68,7 +68,7 @@ export default props => (
         <Image avatar src={Head}/>
         <List.Content>
           <List.Header style={name}>The Red Keep</List.Header>
-          <List.Description style={desc}>R4</List.Description>
+          <List.Description style={desc}>IV</List.Description>
         </List.Content>
       </List.Item>
       </Grid.Column>
@@ -77,7 +77,7 @@ export default props => (
         <Image avatar src={Head}/>
         <List.Content>
           <List.Header style={name}>McMasterful</List.Header>
-          <List.Description style={desc}>R4</List.Description>
+          <List.Description style={desc}>IV</List.Description>
         </List.Content>
       </List.Item>
       </Grid.Column>
