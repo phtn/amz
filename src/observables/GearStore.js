@@ -490,215 +490,469 @@ arbiter: [
 
   assasin: [
     { key: 0,
-      name: "Hunter's Gaze",
+      name: "Assasin's Helm",
       type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      desc: "Vorpal Steel makes this menacing helm incredibly light for its durability.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "City Assault Attack Bonus",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '5%', '8%', '12%', '17%', '23%', '29%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "City Assault Armor Bonus",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
+            '19%', '30%', '47%', '66%', '88%', '111%'
           ]
         },
         { key: 2,
-          name: "Max MP",
+          name: "Troop Load",
           value: [
-            '121', '202', '313', '434', '586', '737'
+            '2%', '2%', '3%', '4%', '5%', '6%'
+          ]
+        },
+        { key: 3,
+          name: "Attack March Speed",
+          value: [
+            '4%', '5%', '7%', '9%', '11%', '14%'
           ]
         }
       ]
-    }, //
+    }, 
     { key: 1,
-      name: "Hunter's Armour",
-      type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      name: "Assasin's Blitz Garb",
+      type: 'Armour',
+      desc: "A light garb that favors freedom of movement and aggression over protection.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "City Assault Attack Bonus",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '6%', '9%', '14%', '20%', '26%', '33%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "City Assault HP Bonus",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
+            '6%', '10%', '16%', '23%', '30%', '38%'
           ]
         },
         { key: 2,
-          name: "Max MP",
+          name: "Troop Load",
           value: [
-            '121', '202', '313', '434', '586', '737'
+            '4%', '5%', '8%', '10%', '13%', '16%'
+          ]
+        },
+        { key: 3,
+          name: "Attack March Speed",
+          value: [
+            '6%', '8%', '11%', '15%', '19%', '23%'
           ]
         }
       ]
-    }, //
+    }, 
+    { key: 2,
+      name: "Assasin's Sandals",
+      type: 'Footwear',
+      desc: "Bestows the fift of weightlessness upon its users feet.",
+      attr: [
+        { key: 0,
+          name: "City Assault Attack Bonus",
+          value: [
+            '14%', '23%', '36%', '51%', '67%', '85%'
+          ]
+        },
+        { key: 1,
+          name: "Troop Load",
+          value: [
+            '2%', '3%', '4%', '6%', '7%', '9%'
+          ]
+        },
+        { key: 2,
+          name: "Attack March Speed",
+          value: [
+            '10%', '14%', '19%', '25%', '32%', '40%'
+          ]
+        }
+      ]
+    },
+    { key: 3,
+      name: "Assasin's Haste Pin",
+      type: 'Accessories',
+      desc: "An extravagant pin fit for royalty.",
+      attr: [
+        { key: 0,
+          name: "City Assault Attack Bonus",
+          value: [
+            '8%', '13%', '20%', '29%', '38%', '48%'
+          ]
+        },
+        { key: 1,
+          name: "Attack March Speed",
+          value: [
+            '4%', '6%', '8%', '11%', '14%', '17%'
+          ]
+        },
+        { key: 2,
+          name: "Gathering March Speed Bonus",
+          value: [
+            '4%', '5%', '7%', '10%', '12%', '15%'
+          ]
+        },
+        { key: 3,
+          name: "Hero Monster March Speed Bonus",
+          value: [
+            '8%', '11%', '15%', '20%', '25%', '31%'
+          ]
+        }
+      ]
+    },
+
   
   ],
   aranea: [
     { key: 0,
-      name: "Hunter's Gaze",
+      name: "Aranea's Faceplate",
       type: 'Helmet',
       desc: "The hunted adorn this grisly trophy.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "Cavalry Attack",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '8%', '10%', '15%', '24%', '39%', '58%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "Troop Armor Bonus",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
+            '7%', '8%', '12%', '19%', '31%', '46%'
           ]
         },
         { key: 2,
-          name: "Max MP",
+          name: "War Spoils",
           value: [
-            '121', '202', '313', '434', '586', '737'
+            '2%', '3%', '4%', '7%', '11%', '17%'
           ]
         }
       ]
-    }, //
+    }, 
     { key: 1,
-      name: "Hunter's Armour",
-      type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      name: "Aranea's Armor",
+      type: 'Armour',
+      desc: "A breathable armor meticulously designed with aerodynamic in mind.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "Cavalry Attack",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '6%', '7%', '11%', '19%', '29%', '44%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "Troop Armor Bonus",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
+            '15%', '18%', '27%', '44%', '70%', '105%'
           ]
         },
         { key: 2,
-          name: "Max MP",
+          name: "War Spoils",
           value: [
-            '121', '202', '313', '434', '586', '737'
+            '2%', '2%', '3%', '5%', '8%', '12%'
           ]
         }
       ]
-    }, //
+    },
+    { key: 2,
+      name: "Aranea's Jump Boots",
+      type: 'Footwear',
+      desc: "Signature boots of a Dragon.",
+      attr: [
+        { key: 0,
+          name: "Cavalry Attack",
+          value: [
+            '13%', '15%', '24%', '39%', '61%', '92%'
+          ]
+        },
+        { key: 1,
+          name: "Troop Armor Bonus",
+          value: [
+            '3%', '3%', '5%', '8%', '12%', '18%'
+          ]
+        },
+        { key: 2,
+          name: "War Spoils",
+          value: [
+            '2%', '3%', '4%', '6%', '10%', '15%'
+          ]
+        }
+      ]
+    },
+    { key: 3,
+      name: "Aranea's High Wind Lance",
+      type: 'Weapon',
+      desc: "As a Dragoons' weapon of choice, the lance is perfectly attuned for aerial combat.",
+      attr: [
+        { key: 0,
+          name: "Cavalry Attack",
+          value: [
+            '20%', '27%', '36%', '59%', '93%', '140%'
+          ]
+        },
+        { key: 1,
+          name: "Armor Piercing",
+          value: [
+            '7%', '8%', '13%', '21%', '33%', '50%'
+          ]
+        },
+        { key: 2,
+          name: "War Spoils",
+          value: [
+            '3%', '4%', '5%', '9%', '14%', '21%'
+          ]
+        }
+      ]
+    },
+    { key: 4,
+      name: "Aranea's Gauntlets",
+      type: 'Accessories',
+      desc: "Ensures for an effortless grip even while flying at high speeds.",
+      attr: [
+        { key: 0,
+          name: "Cavalry Attack",
+          value: [
+            '8%', '9%', '14%', '22%', '35%', '53%'
+          ]
+        },
+        { key: 1,
+          name: "Troop Armor Bonus",
+          value: [
+            '2%', '2%', '3%', '5%', '9%', '13%'
+          ]
+        },
+        { key: 2,
+          name: "War Spoils",
+          value: [
+            '3%', '4%', '6%', '9%', '15%', '22%'
+          ]
+        }
+      ]
+    },
   
   ],
   undertaker: [
     { key: 0,
-      name: "Hunter's Gaze",
+      name: "Undertaker's Hood",
       type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      desc: "Helps keep the head warm and dry while offering sufficient protection.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "City Defense HP Bonus",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '6%', '9%', '20%', '41%', '73%', '115%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "Empire Intimidation",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
-          ]
-        },
-        { key: 2,
-          name: "Max MP",
-          value: [
-            '121', '202', '313', '434', '586', '737'
+            '4%', '5%', '7%', '12%', '19%', '28%'
           ]
         }
       ]
-    }, //
+    },
     { key: 1,
-      name: "Hunter's Armour",
-      type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      name: "Undertaker's Customs",
+      type: 'Armour',
+      desc: "An unusually lavish coat for an undertaker, said to be a gift from a wealthy widow.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "City Defense HP Bonus",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '9%', '15%', '33%', '68%', '119%', '189%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "Empire Intimidation",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
-          ]
-        },
-        { key: 2,
-          name: "Max MP",
-          value: [
-            '121', '202', '313', '434', '586', '737'
+            '3%', '3%', '5%', '8%', '13%', '19%'
           ]
         }
       ]
-    }, //
+    },
+    { key: 2,
+      name: "Undertaker's Boots",
+      type: 'Footwear',
+      desc: "Heavy duty boots you won't be afraid getting dirty.",
+      attr: [
+        { key: 0,
+          name: "City Defense HP Bonus",
+          value: [
+            '4%', '7%', '15%', '31%', '54%', '86%'
+          ]
+        },
+        { key: 1,
+          name: "Empire Intimidation",
+          value: [
+            '2%', '2%', '3%', '5%', '9%', '13%'
+          ]
+        },
+        { key: 2,
+          name: "Gathering March Speed Bonus",
+          value: [
+            '6%', '7%', '10%', '16%', '26%', '39%'
+          ]
+        }
+      ]
+    },
+    { key: 3,
+      name: "Undertaker's Last Word",
+      type: 'Weapon',
+      desc: "Heavy duty boots you won't be afraid getting dirty.",
+      attr: [
+        { key: 0,
+          name: "Troop Attack Bonus",
+          value: [
+            '3%', '5%', '11%', '23%', '41%', '65%'
+          ]
+        },
+        { key: 1,
+          name: "Banishment Portal Troop HP Bonus",
+          value: [
+            '5%', '8%', '18%', '36%', '63%', '100%'
+          ]
+        }
+      ]
+    },
+    { key: 4,
+      name: "Undertaker's Memento",
+      type: 'Accessories',
+      desc: "A splendid ring likely once worn by nobility.",
+      attr: [
+        { key: 0,
+          name: "City Defense HP Bonus",
+          value: [
+            '4%', '21%', '37%', '53%', '70%', '86%'
+          ]
+        },
+        { key: 1,
+          name: "Enemy Hero Banishment Bonus Duration",
+          value: [
+            '12:50', '28:20', '43:40', '59:10', '01:14:30', '01:30:00'
+          ]
+        }
+      ]
+    },
   
   ],
   reaper: [
     { key: 0,
-      name: "Hunter's Gaze",
+      name: "Reaper's End",
       type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      desc: "The last face everyone sees.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "Warrior Attack",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '12%', '14%', '22%', '35%', '56%', '84%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "Enemy Hero Banishment Bonus Duration",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
-          ]
-        },
-        { key: 2,
-          name: "Max MP",
-          value: [
-            '121', '202', '313', '434', '586', '737'
+            '08:30', '10:00', '15:30', '25:20', '40:00', '01:00:00'
           ]
         }
+        
       ]
-    }, //
+    },
     { key: 1,
-      name: "Hunter's Armour",
-      type: 'Helmet',
-      desc: "The hunted adorn this grisly trophy.",
+      name: "Reaper's Shadow",
+      type: 'Armour',
+      desc: "A cloak that turns it and its wearer invisible while in shadow.",
       attr: [
         { key: 0,
-          name: "Troop Armor Bonus",
+          name: "Warrior Attack",
           value: [
-            '12.12%', '20.2%', '31.31%', '43.43%', '58.58%', '73.73%'
+            '11%', '13%', '20%', '32%', '51%', '77%'
           ]
         },
         { key: 1,
-          name: "Hero Critical Hit",
+          name: "Enemy Hero Banishment Bonus Duration",
           value: [
-            '0.61%', '1.01%', '1.52%', '2.12%', '2.83%', '3.64%'
+            '08:30', '10:00', '15:30', '25:20', '40:00', '01:00:00'
+          ]
+        }
+        
+      ]
+    },
+    { key: 2,
+      name: "Reaper's Wake",
+      type: 'Footwear',
+      desc: "Plated boots that are absolutely silent while walking.",
+      attr: [
+        { key: 0,
+          name: "Warrior Attack",
+          value: [
+            '14%', '17%', '26%', '43%', '67%', '101%'
+          ]
+        },
+        { key: 1,
+          name: "Enemy Hero Banishment Bonus Duration",
+          value: [
+            '08:30', '10:00', '15:30', '25:20', '40:00', '01:00:00'
+          ]
+        }
+        
+      ]
+    },
+    { key: 3,
+      name: "Reaper's Touch",
+      type: 'Weapon',
+      desc: "Imparts the mark of the reaper as a fiery omen of doom.",
+      attr: [
+        { key: 0,
+          name: "Warrior Attack",
+          value: [
+            '22%', '26%', '40%', '66%', '105%', '157%'
+          ]
+        },
+        { key: 0,
+          name: "Banishment Portal Troop Attack Bonus",
+          value: [
+            '14%', '17%', '26%', '42%', '67%', '100%'
           ]
         },
         { key: 2,
-          name: "Max MP",
+          name: "Visual Effect: City Burn",
           value: [
-            '121', '202', '313', '434', '586', '737'
+            '0', '0', '0', '0', '0', '1'
           ]
         }
+        
       ]
-    }, //
+    },
+    { key: 4,
+      name: "Reaper's Curse",
+      type: 'Accessories',
+      desc: "Cursed gauntlets, while extremely powerful, are said to shorten its wearer's lifespan... at least those are the rumors.",
+      attr: [
+        { key: 0,
+          name: "Warrior Attack",
+          value: [
+            '9%', '10%', '16%', '26%', '41%', '61%'
+          ]
+        },
+        { key: 1,
+          name: "Enemy Hero Banishment Bonus Duration",
+          value: [
+            '17:10', '20:10', '30:50', '50:30', '01:20:10', '02:00:00'
+          ]
+        }
+        
+      ]
+    }, // END OF REAPER
   
+
+
+
   ],
 
 }
