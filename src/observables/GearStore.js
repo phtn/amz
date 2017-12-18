@@ -102,7 +102,7 @@ const gears = {
   },
   { key: 4,
     name: "Hunter's Insignia",
-    type: 'Weapons',
+    type: 'Accessories',
     desc: "Twin claws that can bypass any defense.",
     attr: [
       { key: 0,
@@ -914,7 +914,7 @@ arbiter: [
             '22%', '26%', '40%', '66%', '105%', '157%'
           ]
         },
-        { key: 0,
+        { key: 1,
           name: "Banishment Portal Troop Attack Bonus",
           value: [
             '14%', '17%', '26%', '42%', '67%', '100%'
@@ -948,12 +948,204 @@ arbiter: [
         }
         
       ]
-    }, // END OF REAPER
+    }
   
 
+  ], // END OF REAPER
 
 
-  ],
+  beastmaster: [
+    { key: 0,
+      name: "Beastmaster's Eyes",
+      type: 'Helmet',
+      desc: "Greatly enhances its wearer's eyesight, while some Beastmasters claim it even enables them to see in the dark.",
+      attr: [
+        { key: 0,
+          name: "Hero Attack Bonus",
+          value: [
+            '2%', '2%', '3%', '5%', '8%', '12%'
+          ]
+        },
+        { key: 1,
+          name: "Hero Critical Hit",
+          value: [
+            '0.7%', '0.8%', '1%', '2%', '3%', '5%'
+          ]
+        },
+        { key: 2,
+          name: "Max MP",
+          value: [
+            '230', '270', '420', '690', '1,090', '1,630'
+          ]
+        }
+      ]
+    }, 
+    { key: 1,
+      name: "Beastmaster's Torso",
+      type: 'Armour',
+      desc: "Armor that embodies nature's grit.",
+      attr: [
+        { key: 0,
+          name: "Hero Attack Bonus",
+          value: [
+            '1%', '1%', '2%', '3%', '5%', '8%'
+          ]
+        },
+        { key: 1,
+          name: "Max MP",
+          value: [
+            '230', '270', '420', '690', '1,090', '1,630'
+          ]
+        },
+        { key: 2,
+          name: "MP Recovery",
+          value: [
+            '2%', '3%', '4%', '7%', '11%', '16%'
+          ]
+        }
+      ]
+    }, 
+    { key: 2,
+      name: "Beastmaster's Legs",
+      type: 'Footwear',
+      desc: "The prowl of the Beastmaster is legendary.",
+      attr: [
+        { key: 0,
+          name: "Hero Monster March Speed Bonus",
+          value: [
+            '7%', '8%', '13%', '21%', '33%', '50%'
+          ]
+        },
+        { key: 1,
+          name: "Hero Attack Bonus",
+          value: [
+            '1%', '2%', '3%', '4%', '7%', '10%'
+          ]
+        },
+        { key: 2,
+          name: "Max MP",
+          value: [
+            '290', '340', '520', '860', '1,360', '2,040'
+          ]
+        }
+      ]
+    },
+    { key: 3,
+      name: "Beastmaster's Claws",
+      type: 'Weapons',
+      desc: "Razor sharp claws perfect for tearing through prey.",
+      attr: [
+        { key: 0,
+          name: "Hero Attack Bonus",
+          value: [
+            '4%', '4%', '6%', '11%', '17%', '25%'
+          ]
+        },
+        { key: 1,
+          name: "Additional Streak per Attack",
+          value: [
+            '1', '1', '1', '2', '3', '4'
+          ]
+        },
+        { key: 2,
+          name: "Max MP",
+          value: [
+            '290', '340', '520', '860', '1,360', '2,040'
+          ]
+        }
+      ]
+    },
+    { key: 4,
+      name: "Beastmaster's Spirit",
+      type: 'Accessories',
+      desc: "Beastial spirits stir from within.",
+      attr: [
+        { key: 0,
+          name: "Hero Attack Bonus",
+          value: [
+            '2%', '3%', '4%', '6%', '10%', '15%'
+          ]
+        },
+        { key: 1,
+          name: "Recovery MP",
+          value: [
+            '3%', '4%', '6%', '10%', '15%', '23%'
+          ]
+        }
+      ]
+    },
+  
+  ], // END OF BEASTMASTER
+
+
+  inquisitor: [
+    { key: 0,
+      name: "Inquisitor's Diadem",
+      type: 'Helmet',
+      desc: "This mesmerizing circlet bestows the user with a keen clairvoyance's.",
+      attr: [
+        { key: 0,
+          name: "Basic Research Speed",
+          value: [
+            '6%', '7%', '10%', '21%', '65%', '7%'
+          ]
+        }
+      ]
+    }, 
+    { key: 1,
+      name: "Inquisitor's Robes",
+      type: 'Armour',
+      desc: "Faint stains from past experiments appear faded on this otherwise impeccable garb.",
+      attr: [
+        { key: 0,
+          name: "Basic Research Speed",
+          value: [
+            '5%', '6%', '8%', '17%', '57%', '95%'
+          ]
+        }
+      ]
+    }, 
+    { key: 2,
+      name: "Inquisitor's Sandals",
+      type: 'Footwear',
+      desc: "Breathable and comfortable, one could forget they were even wearing them.",
+      attr: [
+        { key: 0,
+          name: "Basic Research Speed",
+          value: [
+            '2%', '3%', '6%', '12%', '32%', '53%'
+          ]
+        }
+      ]
+    },
+    { key: 3,
+      name: "Inquisitor's Blade",
+      type: 'Weapons',
+      desc: "Time has been kind to this blade over the years as it still has that freshly-forged glisten.",
+      attr: [
+        { key: 0,
+          name: "Basic Research Speed",
+          value: [
+            '3%', '5%', '7%', '13%', '42%', '71%'
+          ]
+        }
+      ]
+    },
+    { key: 4,
+      name: "Inquisitor's Timepiece",
+      type: 'Accessories',
+      desc: "With this timepiece, one does not simply tell time - one alters it.",
+      attr: [
+        { key: 0,
+          name: "Basic Research Speed",
+          value: [
+            '1%', '2%', '5%', '11%', '28%', '47%'
+          ]
+        }
+      ]
+    },
+  
+  ] // END OF GEAR STORE
 
 }
 export default gears

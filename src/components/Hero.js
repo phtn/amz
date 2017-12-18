@@ -21,6 +21,8 @@ const options = [
   {key: 6, text: 'Aranea', value: 'Aranea'},
   {key: 7, text: 'Undertaker', value: 'Undertaker'},
   {key: 8, text: 'Reaper', value: 'Reaper'},
+  {key: 9, text: 'Beastmaster', value: 'Beastmaster'},
+  {key: 10, text: 'Inquisitor', value: 'Inquisitor'},
 ]
 const observe = new HeroObservables()
 
@@ -60,7 +62,7 @@ const Hero = observer (
             {observe.rightColumn}
           </Grid.Column>
           
-          {this.props.footer}
+          {/* {this.props.footer} */}
           
         </Grid>
       )

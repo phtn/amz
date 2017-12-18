@@ -38,6 +38,14 @@ const text = {
   height: 1,
 
 }
+const desc = {
+  color: '#999',
+  fontSize: 8,
+  maxWidth: '21ch',
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap'
+}
 const values = {
   color: '#eee',
   width: 50,
@@ -133,6 +141,7 @@ const gear = observer (
             <Image avatar src={svg[i.key]} size='mini'/>
             <List.Content>
               <List.Header style={title}>{i.name}</List.Header>
+              <List.Description style={desc}>{i.desc}</List.Description>
             </List.Content>
             <List.Content>
               <List size='mini' divided style={list}>{this.getAttr(i.attr)}</List>
@@ -154,7 +163,7 @@ const gear = observer (
             </List>
           </Segment>
   
-          {this.props.footer}
+          {/* {this.props.footer} */}
   
         </div>
       )
