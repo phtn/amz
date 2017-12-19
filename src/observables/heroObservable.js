@@ -58,17 +58,16 @@ class HeroObservables {
       slideSettings: computed((s)=> {
         return {
           draggable: false,
-          initialSlide: 5
+          initialSlide: this.color,
         }
       }),
     
 
-      color: 5,
+      color: 0,
       
       getColor: action(a=> {
         console.log(a)
         this.color = a
-        console.log(this.color)
       })
 
     })

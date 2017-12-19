@@ -10,7 +10,7 @@ import Footer from '../footer'
 class NavObservables {
   constructor(){
     extendObservable(this, {
-      active: 'General',
+      active: 'Hero',
       setActive: action(a=> {
         this.active = a
       }),

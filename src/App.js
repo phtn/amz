@@ -120,7 +120,7 @@ const Main = observer (
           <section style={header}>
             
             <img src={Swords} style={logo} alt="logo" />
-            <h1 style={title}>
+            <h1 style={title} >
               AMZ</h1>
           </section>
           <br/>

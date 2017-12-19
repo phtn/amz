@@ -10,6 +10,8 @@ import Boot from '../assets/boot.svg'
 import Sword from '../assets/sword.svg'
 import Necklace from '../assets/necklace.svg'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 
 
@@ -52,6 +54,14 @@ const values = {
   fontSize: 9,
   textAlign: 'right',
 }
+const colors = {
+  grey:  {color: '#666'},
+  white:  {color: '#eee'},
+  green:  {color: '#34bf49'},
+  blue:  {color: '#0099e5'},
+  purple:  {color: '#8e43e7'},
+  gold:  {color: '#ffd900'}
+}
 
 const svg = [Helmet, Armor, Boot, Sword, Necklace, Necklace, Necklace]
 const list = {height: 100}
@@ -69,41 +79,49 @@ const gear = observer (
     //  this.getSlide(this.props.color)
     const settings = {
       arrows: false,
-      infinite: false,
+      infinite: true,
       dots: false,
       speed: 500,
       vertical: false,
-      autoplay: false,
-      autoplaySpeed: 3000,
-      fade: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      fade: false,
       centerMode: false,
       slidesToScroll: 1,
       slidesToShow: 1,
       ...this.props.slide
     }
-
     
-     return <Slider ref='slider' {...settings}>
-      <div>{a}</div>
-      <div>{b}</div>
-      <div>{c}</div>
-      <div>{d}</div>
-      <div>{e}</div>
-      <div>{f}</div>
+    
+     return <Slider ref={c => this.slider = c } {...settings}>
+      <div style={colors.grey}>{a}</div>
+      <div style={colors.white}>{b}</div>
+      <div style={colors.green}>{c}</div>
+      <div style={colors.blue}>{d}</div>
+      <div style={colors.purple}>{e}</div>
+      <div style={colors.gold}>{f}</div>
      </Slider>
    }
-    componentWillReceiveProps(props){
-      // this.slider.slick('slickGoTo',props.color)
+    componentWillReceiveProps(){
+      // this.refs.slider.slickGoTo(this.props.color)
       // console.log(this.refs.slider.slickGoTo(this.props.color))
       // this.slider.slickGoTo(this.props.color)
     }
-    componentDidMount(){
-      // this.refs.slider.slickGoTo(this.props.color)
+    componentWillMount(){
+      // setTimeout(time=> {
+      //   this.slider.slickGoTo(1)
+      //   console.log(this.slider)
+      // }, 2000)
       // this.slider.slickGoTo(this.props.color)
       // this.refs.slider.slick('slickGoTo', 1)
+      // console.log(this.refs.slider)
     }
     componentDidUpdate(){
       // this.refs.slider.slickGoTo()
+    }
+
+    slide(){
+      // this.refs.slider.innerSlider.slickGoTo(3)
     }
 
     getAttr(attr, sett){
@@ -117,6 +135,7 @@ const gear = observer (
                   
             <List.Content verticalAlign='middle' floated='right' style={values}>  
               {this.getValues(a.value[0],a.value[1],a.value[2],a.value[3],a.value[4],a.value[5],)}
+              
             </List.Content>
               
               
@@ -135,6 +154,7 @@ const gear = observer (
     }
 
     getItems(){
+      
       if (this.props.items !== undefined){
         return this.props.items.map(i=> (
           <List.Item key={i.key}>
@@ -155,6 +175,7 @@ const gear = observer (
     
   
     render(){
+      
       return (
         <div>
           <Segment style={segment}>
