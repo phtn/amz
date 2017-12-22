@@ -42,6 +42,7 @@ const Hero = observer (
                 button floating fluid
                 style={dropdown} 
                 options={options}
+                onClick={()=> observe.pause()}
                 onChange={(e)=> observe.leftDropdown(e.target.innerText)}
                 defaultValue={options[0].value} />
             </Grid.Column>
@@ -50,6 +51,7 @@ const Hero = observer (
                 button floating fluid
                 style={dropdown} 
                 options={options}
+                onClick={()=> observe.pause()}
                 onChange={(e)=> observe.rightDropdown(e.target.innerText)}
                 defaultValue={options[2].value} />
               </Grid.Column>

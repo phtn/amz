@@ -35,22 +35,22 @@ const gearLevel = observer (
         <div style={container}>
           <Grid centered divided='vertically' style={grid}>
             <Grid.Column width={2}>
-              <Button color='grey' onClick={()=> obs.getColor(1)}></Button>
+              <Button color='grey' onClick={()=> obs.getColor(0)}></Button>
             </Grid.Column>
             <Grid.Column width={2}>
-              <Button></Button>
+              <Button onClick={()=> obs.getColor(1)}></Button>
             </Grid.Column>
             <Grid.Column width={2}>
-              <Button color='green'></Button>
+              <Button color='green' onClick={()=> obs.getColor(2)}></Button>
             </Grid.Column>
             <Grid.Column width={2}>
-              <Button color='blue'></Button>
+              <Button color='blue' onClick={()=> obs.getColor(3)}></Button>
             </Grid.Column>
             <Grid.Column width={2}>
-              <Button color='purple'></Button>
+              <Button color='purple' onClick={()=> obs.getColor(4)}></Button>
             </Grid.Column>
             <Grid.Column width={2}>
-              <Button color='yellow'></Button>
+              <Button color='yellow' onClick={()=> obs.getColor(5)}></Button>
             </Grid.Column>
           </Grid>
         </div>

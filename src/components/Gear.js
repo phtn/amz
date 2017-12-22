@@ -70,10 +70,10 @@ const gear = observer (
   class Gear extends Component {
     constructor(props){
       super(props)
-      this.getSlide = this.getSlide.bind(this)
+      this.slide = this.slide.bind(this)
     }
    getSlide(slide){
-    //  this.refs.slider.slickGoTo(slide)
+    //  this.slider.slickGoTo(slide)
    }
    getValues(a,b,c,d,e,f){
     //  this.getSlide(this.props.color)
@@ -83,7 +83,6 @@ const gear = observer (
       dots: false,
       speed: 500,
       vertical: false,
-      autoplay: true,
       autoplaySpeed: 4000,
       fade: false,
       centerMode: false,
@@ -93,7 +92,7 @@ const gear = observer (
     }
     
     
-     return <Slider ref={c => this.slider = c } {...settings}>
+     return <Slider ref={c => this.slider = c } {...settings} className='slides'>
       <div style={colors.grey}>{a}</div>
       <div style={colors.white}>{b}</div>
       <div style={colors.green}>{c}</div>
@@ -102,10 +101,12 @@ const gear = observer (
       <div style={colors.gold}>{f}</div>
      </Slider>
    }
-    componentWillReceiveProps(){
+    componentWillReceiveProps(props){
       // this.refs.slider.slickGoTo(this.props.color)
       // console.log(this.refs.slider.slickGoTo(this.props.color))
       // this.slider.slickGoTo(this.props.color)
+      // this.slide(props)
+      // console.log(props)
     }
     componentWillMount(){
       // setTimeout(time=> {
@@ -121,7 +122,8 @@ const gear = observer (
     }
 
     slide(){
-      // this.refs.slider.innerSlider.slickGoTo(3)
+      this.slider.slickGoTo(3)
+      console.log(this)
     }
 
     getAttr(attr, sett){
@@ -158,7 +160,7 @@ const gear = observer (
       if (this.props.items !== undefined){
         return this.props.items.map(i=> (
           <List.Item key={i.key}>
-            <Image avatar src={svg[i.key]} size='mini'/>
+            <Image avatar src={svg[i.key]} size='mini' onClick={()=>this.slide()}/>
             <List.Content>
               <List.Header style={title}>{i.name}</List.Header>
               <List.Description style={desc}>{i.desc}</List.Description>
