@@ -50,7 +50,7 @@ const desc = {
 }
 const values = {
   color: '#eee',
-  width: 50,
+  width: 40,
   fontSize: 9,
   textAlign: 'right',
 }
