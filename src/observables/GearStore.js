@@ -1143,9 +1143,249 @@ arbiter: [
           ]
         }
       ]
-    },
+    } 
+  ],
   
-  ] // END OF GEAR STORE
+  glacian: [
+    { key: 0,
+      name: "Glacian's Guise",
+      type: 'Helmet',
+      desc: "A protective facemask, capable of shielding from blistering cold winds and powerful attacks.",
+      attr: [
+        { key: 0,
+          name: "Troop Attack Bonus",
+          value: [
+            '8%', '10%', '23%', '48%', '91%', '154%'
+          ]
+        },
+        { key: 1,
+          name: "Mage Armor",
+          value: [
+            '13%', '17%', '37%', '79%', '149%', '251%'
+          ]
+        },
+        { key: 2,
+          name: "Mage Training Speed",
+          value: [
+            '7%', '8%', '11%', '19%', '32%', '50%'
+          ]
+        },
+      ]
+    }, 
+    { key: 1,
+      name: "Glacian's Plate",
+      type: 'Armour',
+      desc: "Tiny bits of diamond are encrusted in its metal and woven into its fabric.",
+      attr: [
+        { key: 0,
+          name: "Troop Attack Bonus",
+          value: [
+            '6%', '8%', '17%', '37%', '70%', '118%'
+          ]
+        },
+        { key: 1,
+          name: "Mage Armor",
+          value: [
+            '21%', '27%', '60%', '129%', '243%', '410%'
+          ]
+        },
+        { key: 2,
+          name: "Attack Resistance",
+          value: [
+            '4%', '5%', '7%', '11%', '19%', '30%'
+          ]
+        },
+      ]
+    }, 
+    { key: 2,
+      name: "Glacian's Ice Climbers",
+      type: 'Footwear',
+      desc: "Shining plated boots that make walking across ice effortless.",
+      attr: [
+        { key: 0,
+          name: "Troop Attack Bonus",
+          value: [
+            '8%', '11%', '24%', '51%', '96%', '162%'
+          ]
+        },
+        { key: 1,
+          name: "Mage Armor",
+          value: [
+            '10%', '13%', '29%', '63%', '119%', '201%'
+          ]
+        },
+        { key: 2,
+          name: "Attack March Speed",
+          value: [
+            '7%', '7%', '11%', '18%', '30%', '47%'
+          ]
+        },
+      ]
+    },
+    { key: 3,
+      name: "Glacian's Seraphim Rod",
+      type: 'Weapons',
+      desc: "Imbued with the power of the Goddes of Ice.",
+      attr: [
+        { key: 0,
+          name: "Troop Attack Bonus",
+          value: [
+            '23%', '31%', '69%', '148%', '278%', '469%'
+          ]
+        }
+      ]
+    },
+    { key: 4,
+      name: "Glacians's Necklace",
+      type: 'Accessories',
+      desc: "A delicate chocker that appears to tell a store through its intricate metalwork.",
+      attr: [
+        { key: 0,
+          name: "Troop Attack Bonus",
+          value: [
+            '4%', '5%', '12%', '25%', '48%', '80%'
+          ]
+        },
+        { key: 1,
+          name: "Mage Attack",
+          value: [
+            '4%', '5%', '12%', '25%', '48%', '80%'
+          ]
+        },
+        { key: 2,
+          name: "Royal Research Speed",
+          value: [
+            '2%', '3%', '4%', '6%', '10%', '16%'
+          ]
+        },
+      ]
+    }, 
+  
+  ], // END OF GLACIAN
+
+
+  mercenary: [
+    { key: 0,
+      name: "Mercenary Commander's Coif",
+      type: 'Helmet',
+      desc: "Protects the wearer and displays their importance.",
+      attr: [
+        { key: 0,
+          name: "Mercenary Troop Attack",
+          value: [
+            '4%', '5%', '12%', '25%', '47%', '79%'
+          ]
+        },
+        { key: 1,
+          name: "Mercenary Troom Armor",
+          value: [
+            '9%', '11%', '25%', '54%', '102%', '171%'
+          ]
+        },
+        { key: 2,
+          name: "Mercenary Training Queue",
+          value: [
+            '730', '810', '1,170', '1,940', '3,220', '5,090'
+          ]
+        },
+      ]
+    }, 
+    { key: 1,
+      name: "Mercenary Commander's Guard",
+      type: 'Armour',
+      desc: "Lightweight for mobility but sturdy enogh to take a blow.",
+      attr: [
+        { key: 0,
+          name: "Mercenary Troop Armor Bonus",
+          value: [
+            '24%', '32%', '70%', '151%', '284%', '479%'
+          ]
+        },
+        { key: 1,
+          name: "Mercenary Troop HP Bonus",
+          value: [
+            '2%', '3%', '7%', '15%', '29%', '49%'
+          ]
+        },
+        { key: 2,
+          name: "Mercenary Training Queue",
+          value: [
+            '730', '810', '1,170', '1,940', '3,220', '5,090'
+          ]
+        },
+      ]
+    }, 
+    { key: 2,
+      name: "Mercenary Commander's Treads",
+      type: 'Foodwear',
+      desc: "Earned as payment from a previous successful job.",
+      attr: [
+        { key: 0,
+          name: "Mercenary Troop HP Bonus",
+          value: [
+            '9%', '12%', '25%', '55%', '103%', '174%'
+          ]
+        },
+        { key: 1,
+          name: "Mercenary Training Queue",
+          value: [
+            '690', '760', '1,110', '1,840', '3,050', '4,820'
+          ]
+        },
+        { key: 2,
+          name: "Mercenary Training Speed",
+          value: [
+            '1%', '1%', '2%', '3%', '6%', '9%'
+          ]
+        },
+      ]
+    }, 
+    { key: 3,
+      name: "Mercenary Commander's Bribe",
+      type: 'Weapons',
+      desc: "A Mercenary's best friend on the battlefield.",
+      attr: [
+        { key: 0,
+          name: "Mercenary Troop Attack Bonus",
+          value: [
+            '26%', '35%', '77%', '165%', '312%', '525%'
+          ]
+        },
+        { key: 1,
+          name: "Mercenary Training Speed",
+          value: [
+            '2%', '2%', '3%', '4%', '7%', '11%'
+          ]
+        },
+      ]
+    },
+    { key: 4,
+      name: "Mercenary Commarnder's Band",
+      type: 'Accessories',
+      desc: "A strong leather arm band picked up from a defeated foe.",
+      attr: [
+        { key: 0,
+          name: "Mercenary Troop Attack",
+          value: [
+            '4%', '5%', '11%', '24%', '46%', '77%'
+          ]
+        },
+        { key: 1,
+          name: "Mercenary Troom Armor",
+          value: [
+            '2%', '3%', '7%', '14%', '27%', '45%'
+          ]
+        },
+        { key: 2,
+          name: "Mercenary Training Speed",
+          value: [
+            '1%', '2%', '2%', '4%', '6%', '10%'
+          ]
+        },
+      ]
+    }, 
+  
+  ], // END OF MERCENARY
 
 }
 export default gears

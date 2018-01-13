@@ -6,7 +6,7 @@ import HeroObservables from '../observables/heroObservable'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css' 
 
-const grid = { margin: 5, textAlign: 'center'}
+const grid = { margin: 2, textAlign: 'center'}
 // const segment = {backgroundColor: 'transparent'}
 const title = {fontFamily: 'Spectral SC, serif', color: '#666', opacity: 0.8}
 // const sentinel = {fontFamily: 'Roboto, sans-serif', fontWeight: 100, color: '#F0B400', textAlign: 'center'}
@@ -23,6 +23,8 @@ const options = [
   {key: 8, text: 'Reaper', value: 'Reaper'},
   {key: 9, text: 'Beastmaster', value: 'Beastmaster'},
   {key: 10, text: 'Inquisitor', value: 'Inquisitor'},
+  {key: 11, text: 'Glacian', value: 'Glacian'},
+  {key: 12, text: 'Mercenary', value: 'Mercenary'},
 ]
 const observe = new HeroObservables()
 

@@ -160,7 +160,7 @@ const gear = observer (
       if (this.props.items !== undefined){
         return this.props.items.map(i=> (
           <List.Item key={i.key}>
-            <Image avatar src={svg[i.key]} size='mini' onClick={()=>this.slide()}/>
+            <Image avatar src={svg[i.key]}  onClick={()=>this.slide()}/>
             <List.Content>
               <List.Header style={title}>{i.name}</List.Header>
               <List.Description style={desc}>{i.desc}</List.Description>
